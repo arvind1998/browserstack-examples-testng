@@ -6,7 +6,6 @@
     "parallel": {
       "common_caps": {
         "project": "browserstack-examples",
-        "build": "BROWSERSTACK_BUILD_NAME",
         "name": "Parallel Test",
         "browserstack.debug": "true",
         "browserstack.networkLogs": "true",
@@ -19,7 +18,8 @@
           "browser": "Chrome",
           "browser_version": "latest-1",
           "browserstack.selenium_version": "3.141.59",
-          "browserstack.sendKeys": true
+          "browserstack.sendKeys": true,
+          "build": "BROWSERSTACK_BUILD_NAME"
         },
         {
           "os": "Windows",
@@ -55,14 +55,14 @@
     "single": {
       "common_caps": {
         "project": "browserstack-examples",
-        "build": "BROWSERSTACK_BUILD_NAME",
         "name": "Single Test"
       },
       "env_caps": [
         {
           "os": "Windows",
           "os_version": "10",
-          "browser": "Chrome"
+          "browser": "Chrome",
+          "build": "BROWSERSTACK_BUILD_NAME"
         }
       ]
     },
